@@ -1,7 +1,7 @@
 import tensorflow as tf
 import ssl
 
-if __name__ == '__main__':
+def main():
     ssl._create_default_https_context = ssl._create_unverified_context
 
     # Load the MNIST dataset
@@ -26,3 +26,6 @@ if __name__ == '__main__':
 
     # Evaluate the model
     model.evaluate(x_test, y_test, verbose=2)
+
+if __name__ == '__main__':
+    main()
